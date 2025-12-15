@@ -1,0 +1,2 @@
+[console_scripts]
+generic_robot_driver = generic_robot_driver.robot_base_driver:main

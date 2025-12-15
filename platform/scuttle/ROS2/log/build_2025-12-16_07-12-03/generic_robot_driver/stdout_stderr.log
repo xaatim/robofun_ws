@@ -1,0 +1,52 @@
+/usr/lib/python3.14/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running develop
+running egg_info
+creating generic_robot_driver.egg-info
+writing generic_robot_driver.egg-info/PKG-INFO
+writing dependency_links to generic_robot_driver.egg-info/dependency_links.txt
+writing entry points to generic_robot_driver.egg-info/entry_points.txt
+writing requirements to generic_robot_driver.egg-info/requires.txt
+writing top-level names to generic_robot_driver.egg-info/top_level.txt
+writing manifest file 'generic_robot_driver.egg-info/SOURCES.txt'
+reading manifest file 'generic_robot_driver.egg-info/SOURCES.txt'
+writing manifest file 'generic_robot_driver.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/lib/python3.14/site-packages/generic-robot-driver.egg-link (link to .)
+Installing generic_robot_driver script to /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/lib/generic_robot_driver
+
+Installed /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver
+running symlink_data
+creating /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/ament_index/resource_index/packages
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/resource/generic_robot_driver -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/ament_index/resource_index/packages
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/package.xml -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver
+creating /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/launch
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/launch/generic_robot_driver.launch.py -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/launch
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/launch/robot_bringup.launch.py -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/launch
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/launch/robot_teleop.launch.py -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/launch
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/launch/display.launch.py -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/launch
+creating /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/config
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/config/ydlidar.yaml -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/config
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/config/nav2_scuttle_devkit_params.yaml -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/config
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/config/robot_driver.yaml -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/config
+creating /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/base_link.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/base_link_collision_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/l_caster_swivel_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/l_caster_swivel_collision_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/l_caster_wheel_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/l_caster_wheel_collision_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/l_wheel_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/l_wheel_collision_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/lidar_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/r_caster_swivel_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/r_caster_swivel_collision_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/r_caster_wheel_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/r_caster_wheel_collision_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/r_wheel_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/meshes/r_wheel_collision_1.stl -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/meshes
+creating /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/urdf
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/urdf/scuttle_ydlidar.xacro -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/urdf
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/urdf/scuttle.trans -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/urdf
+symbolically linking /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/urdf/materials.xacro -> /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/urdf
+creating /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/share/generic_robot_driver/urdf/realsense
