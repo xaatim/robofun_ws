@@ -1,0 +1,10 @@
+[0.663s] Invoking command in '/home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver': DEBUGINFOD_URLS=https://debuginfod.archlinux.org PYTHONPATH=/home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/prefix_override:/usr/lib/python3.13/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/lib/python3.13/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/build --no-deps symlink_data
+[0.801s] /usr/lib/python3.13/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.801s]   warnings.warn(msg)
+[0.864s] usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+[0.864s]    or: setup.py --help [cmd1 cmd2 ...]
+[0.864s]    or: setup.py --help-commands
+[0.864s]    or: setup.py cmd --help
+[0.864s] 
+[0.864s] error: option --editable not recognized
+[0.880s] Invoked command in '/home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver' returned '1': DEBUGINFOD_URLS=https://debuginfod.archlinux.org PYTHONPATH=/home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/prefix_override:/usr/lib/python3.13/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/install/generic_robot_driver/lib/python3.13/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hatim/Documents/Github/robofun_ws/platform/scuttle/ROS2/build/generic_robot_driver/build --no-deps symlink_data
