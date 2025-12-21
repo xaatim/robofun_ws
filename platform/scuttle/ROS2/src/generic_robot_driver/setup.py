@@ -1,17 +1,14 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages # Added find_packages
 from glob import glob
 
 package_name = 'generic_robot_driver'
-sub_package = "constants"
-sub_modules = "generic_robot_driver/modules"
-motor_module = "generic_robot_driver/modules/motor"
-encoder_module = "generic_robot_driver/modules/encoder"
 
 setup(
     name=package_name,
     version='0.0.0',
-    packages=[package_name, sub_modules, motor_module, encoder_module],
+    # FIX: Use find_packages() instead of manually listing paths with slashes
+    packages=find_packages(exclude=['test']), 
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
