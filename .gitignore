@@ -1,6 +1,6 @@
-platform/scuttle/ROS2/build/
-platform/scuttle/ROS2/install/
-platform/scuttle/ROS2/log/
+**/build/
+**/install/
+**/log/
 
 __pycache__/
 .vscode/
