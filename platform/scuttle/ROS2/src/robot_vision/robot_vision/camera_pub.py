@@ -12,7 +12,7 @@ class camera_publisher(Node):
     self.create_timer(timer_period,self.publisher_callback)
   
     # self.cap = cv2.VideoCapture(r"/home/ros2_ws/src/Recording 2025-07-25 221211.mp4")
-    self.cap = cv2.VideoCapture(0) # force v4l2 backend
+    self.cap = cv2.VideoCapture(6) # force v4l2 backend
     #self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M','J','P','G')) # type: ignore
     self.br = CvBridge()
     

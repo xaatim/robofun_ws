@@ -1,6 +1,6 @@
 **/build/
 **/install/
 **/log/
-
+**/antelopev2/
 __pycache__/
 .vscode/
