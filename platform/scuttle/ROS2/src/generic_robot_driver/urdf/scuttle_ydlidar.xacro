@@ -5,7 +5,7 @@
   <xacro:include filename="$(find generic_robot_driver)/urdf/materials.xacro" />
   <xacro:include filename="$(find generic_robot_driver)/urdf/scuttle.trans" />
   <xacro:include filename="$(find generic_robot_driver)/urdf/scuttle.gazebo" />
-  <!-- <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/> -->
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
 
   <link name="base_footprint"></link>
 
@@ -212,7 +212,7 @@
   </joint>
 
   <joint name="lidar" type="fixed">
-    <origin rpy="0 0 0" xyz="0.2125 0.0 0.40" />
+    <origin rpy="0 0 0" xyz="0.15 0.0 0.43" />
     <parent link="base_link" />
     <child link="lidar_1" />
   </joint>
@@ -245,9 +245,9 @@
     <axis xyz="-1.0 -0.0 0.0" />
   </joint>
 
-  <!-- <xacro:sensor_d435i parent="base_link" use_nominal_extrinsics="$(arg
+  <xacro:sensor_d435i parent="base_link" use_nominal_extrinsics="$(arg
   use_nominal_extrinsics)">
     <origin rpy="0 0 0" xyz="0.25 0 0.28" />
-</xacro:sensor_d435i> -->
+</xacro:sensor_d435i>
 
 </robot>

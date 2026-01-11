@@ -5,11 +5,12 @@ from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
+
 def generate_launch_description():
     pkg_share = get_package_share_directory('generic_robot_driver')
-    
+
     # Configuration Variables
-    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     cartographer_config_dir = os.path.join(pkg_share, 'config')
     cartographer_config_basename = 'cartographer.lua'
 
@@ -26,7 +27,7 @@ def generate_launch_description():
         ],
         remappings=[
             # Remap if your scan topic is different (e.g. /scan_raw -> /scan)
-            # ('scan', 'scan') 
+            # ('scan', 'scan')
         ]
     )
 
