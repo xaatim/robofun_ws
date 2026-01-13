@@ -3,6 +3,8 @@ import threading
 import numpy as np
 import subprocess
 import os
+
+from regex import T
 from .constants import ROBOT_BASE, ROBOT_WHEEL_RADIUS, MOTOR_WHEEL_RATIO, ENCODER_RESOLUTION
 from .motor import Motor
 from .encoder import Encoder
@@ -12,7 +14,7 @@ class MotorEncoder:
     def __init__(self, i2c_bus_id, motor_addr, motor_pins, encoder_addr, encoder_invert=False, motor_type="hw231"):
         self.motor = Motor(i2c_bus_id, pins=motor_pins, address=motor_addr)
         self.encoder = Encoder(i2c_bus_id, address=encoder_addr,
-                               resolution=ENCODER_RESOLUTION, invert=encoder_invert)
+                              resolution=ENCODER_RESOLUTION, invert=encoder_invert)
         self.position_prev, self.timestamp_prev = self.encoder.read_timestamped_position()
         self.position, self.timestamp = self.encoder.read_timestamped_position()
         self.angular_velocity = 0

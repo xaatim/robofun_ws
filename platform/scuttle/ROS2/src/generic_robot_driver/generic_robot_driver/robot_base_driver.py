@@ -83,12 +83,12 @@ class DriverNode(Node):
                                 0., 0., 0., 0., 0., 0.1]
 
         twist = Twist()
-        twist.linear.x = vx
+        twist.linear.x = float(vx)
         twist.linear.y = 0.
         twist.linear.z = 0.
         twist.angular.x = 0.
         twist.angular.y = 0.
-        twist.angular.z = vth
+        twist.angular.z = float(vth)
         odom.twist.twist = twist
 
         self._publisher_odom.publish(odom)
@@ -117,7 +117,7 @@ class DriverNode(Node):
             self._publisher_jointstate.publish(jointState)
 
     def callback_cmdvel(self, msg):
-        self.robot.move([msg.linear.x, msg.angular.z])
+        self.robot.move([msg.linear.x, -msg.angular.z])
 
     def stop(self):
         self.robot.stop()
