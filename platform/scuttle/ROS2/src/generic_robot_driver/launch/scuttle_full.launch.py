@@ -5,12 +5,13 @@ from launch.substitutions import Command
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
+
 def generate_launch_description():
     # --- Paths and Configurations ---
     package_path = get_package_share_path('generic_robot_driver')
     urdf_path = package_path / 'urdf/scuttle_ydlidar.xacro'
     ydlidar_config = os.path.join(package_path, 'config/ydlidar.yaml')
-    
+
     # Joystick Config from robot_teleop.launch.py
     JOY_CONFIG = {
         'dev': '/dev/input/js0',
@@ -29,7 +30,7 @@ def generate_launch_description():
     }
 
     # --- Nodes from Bringup ---
-    
+
     # 1. Robot State Publisher (TF & URDF)
     robot_state_publisher = Node(
         package='robot_state_publisher',
@@ -52,9 +53,8 @@ def generate_launch_description():
         parameters=[{
             'enable_tf_pub': True,
             'enable_jointstate_pub': True,
-            'motor_type': 'hw231' # Default for devkit
+            'motor_type': 'hw231'  # Default for devkit
         }],
-        remappings=[('odom', 'odom/amr')]
     )
 
     # 4. YDLIDAR Driver

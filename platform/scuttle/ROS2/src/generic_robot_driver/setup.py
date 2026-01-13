@@ -19,6 +19,7 @@ setup(
         (os.path.join('share', package_name, 'urdf') , glob(os.path.join('urdf', '*.*'))),
         (os.path.join('share', package_name, 'urdf/realsense') , glob(os.path.join('urdf/realsense', '*.*'))),
         (os.path.join('share', package_name, 'worlds'), glob(os.path.join('worlds', '*.world'))),
+        (os.path.join('share', package_name, 'maps'), glob(os.path.join('maps', '*.yaml'))),
     
     ],
     install_requires=['setuptools'],

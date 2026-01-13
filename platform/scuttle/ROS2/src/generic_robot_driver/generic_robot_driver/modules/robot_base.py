@@ -47,6 +47,8 @@ class MotorEncoder:
         self.position, self.timestamp = self.encoder.read_timestamped_position()
 
     def get_rotation(self):
+        if self.position is None or self.position_prev is None:
+            return 0
         rotation = self.position - self.position_prev
         if(self.mToWGear_rollover <= -rotation):
             return (rotation + self.encoder.resolution) * self.mToWGear_ratio

@@ -25,7 +25,7 @@ class DriverNode(Node):
 
         self.enable_tf_pub = self.get_parameter('enable_tf_pub').value
         self.enable_jointstate_pub = self.get_parameter('enable_jointstate_pub').value
-        self.motor_type = self.get_parameter('motor_type').value
+        self.motor_type = self.get_parameter('motor_type').value or 'hw231'
 
         # Pub & Sub
         self._subcriber_cmdvel = self.create_subscription(Twist, 'cmd_vel', self.callback_cmdvel, 10)
