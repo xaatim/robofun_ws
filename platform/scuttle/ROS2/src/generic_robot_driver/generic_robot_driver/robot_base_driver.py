@@ -11,35 +11,40 @@ from tf2_ros import TransformBroadcaster
 
 from .modules.robot_base import RobotDriver
 
+
 class DriverNode(Node):
     def __init__(self):
         super().__init__("generic_robot_driver")
-        
+
         # Parameters
         self.rate = 50
-        
+        self.create_rate(self.rate)
+
         self.declare_parameter('enable_tf_pub', False)
         self.declare_parameter('enable_jointstate_pub', False)
         self.declare_parameter('motor_type', 'hw231')
 
         self.enable_tf_pub = self.get_parameter('enable_tf_pub').value
-        self.enable_jointstate_pub = self.get_parameter('enable_jointstate_pub').value
-        self.motor_type = self.get_parameter('motor_type').value or 'hw231'
+        self.enable_jointstate_pub = self.get_parameter(
+            'enable_jointstate_pub').value
+        self.motor_type = self.get_parameter('motor_type').value
 
         # Pub & Sub
-        self._subcriber_cmdvel = self.create_subscription(Twist, 'cmd_vel', self.callback_cmdvel, 10)
+        self._subcriber_cmdvel = self.create_subscription(
+            Twist, 'cmd_vel', self.callback_cmdvel, 10)
         self._publisher_odom = self.create_publisher(Odometry, 'odom', 10)
-        self._publisher_jointstate = self.create_publisher(JointState, 'joint_states', 10)
-        
+        self._publisher_jointstate = self.create_publisher(
+            JointState, 'joint_states', 10)
+
         # TF Broadcaster
         self._tf_broadcaster = TransformBroadcaster(self)
 
         # Robot
-        self.robot = RobotDriver(hz=self.rate, motor_addrs=[0x43, [2, 3], [0, 1]], encoder_addrs=[0x40, 0x41], motor_type=self.motor_type)
+        self.robot = RobotDriver(hz=self.rate, motor_addrs=[0x43, [2, 3], [
+                                 0, 1]], encoder_addrs=[0x40, 0x41], motor_type=self.motor_type)
 
         # Loop
-        self.timer = self.create_timer( 1 / self.rate, self.timer_callback )
-    
+        self.timer = self.create_timer(1 / self.rate, self.timer_callback)
 
     def timer_callback(self):
         current_time = self.get_clock().now().to_msg()
@@ -83,12 +88,12 @@ class DriverNode(Node):
                                 0., 0., 0., 0., 0., 0.1]
 
         twist = Twist()
-        twist.linear.x = float(vx)
+        twist.linear.x = vx
         twist.linear.y = 0.
         twist.linear.z = 0.
         twist.angular.x = 0.
         twist.angular.y = 0.
-        twist.angular.z = float(vth)
+        twist.angular.z = vth
         odom.twist.twist = twist
 
         self._publisher_odom.publish(odom)
@@ -122,6 +127,7 @@ class DriverNode(Node):
     def stop(self):
         self.robot.stop()
 
+
 def main(args=None):
     rclpy.init(args=args)
 
@@ -130,6 +136,7 @@ def main(args=None):
     driver_node.stop()
     driver_node.destroy_node()
     rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()
