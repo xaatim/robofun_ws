@@ -39,7 +39,10 @@ def generate_launch_description():
             Command(['xacro ', str(urdf_path)]), value_type=str)}]
     )
 
-
+    joint_state_publisher = Node(
+        package='joint_state_publisher',
+        executable='joint_state_publisher'
+    ) 
 
     # 3. Base Driver (Motor Control)
     robot_driver = Node(
@@ -94,6 +97,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         robot_state_publisher,
+        joint_state_publisher,
         robot_driver,
         ydlidar,
         camera,
