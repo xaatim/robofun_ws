@@ -6,9 +6,9 @@ from launch.substitutions import Command
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
-ROBOT_NAMESPACE = None
-CAMERA_NAMESPACE = None
-LIDAR_NAMESAPCE = None
+ROBOT_NAMESPACE = "/"
+CAMERA_NAMESPACE = "camera"
+LIDAR_NAMESAPCE = "scan"
 SCUTTLE_URDF_PATH = None
 SCUTTLE_BASE_TYPE = os.getenv("ROBOT_BASE_TYPE", "scuttle")
 SCUTTLE_CONFIG_DIR = os.path.join(get_package_share_path('generic_robot_driver'), 'config')

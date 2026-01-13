@@ -17,7 +17,6 @@ class DriverNode(Node):
         
         # Parameters
         self.rate = 50
-        self.create_rate(self.rate)
         
         self.declare_parameter('enable_tf_pub', False)
         self.declare_parameter('enable_jointstate_pub', False)
@@ -36,7 +35,7 @@ class DriverNode(Node):
         self._tf_broadcaster = TransformBroadcaster(self)
 
         # Robot
-        self.robot = RobotDriver(hz=self.rate, motor_addrs=[0x43, [2, 3], [0, 1]], encoder_addrs=[0x41, 0x40], motor_type=self.motor_type)
+        self.robot = RobotDriver(hz=self.rate, motor_addrs=[0x43, [2, 3], [0, 1]], encoder_addrs=[0x40, 0x41], motor_type=self.motor_type)
 
         # Loop
         self.timer = self.create_timer( 1 / self.rate, self.timer_callback )
@@ -84,12 +83,12 @@ class DriverNode(Node):
                                 0., 0., 0., 0., 0., 0.1]
 
         twist = Twist()
-        twist.linear.x = 0.
-        twist.linear.y = vx
+        twist.linear.x = vx
+        twist.linear.y = 0.
         twist.linear.z = 0.
         twist.angular.x = 0.
         twist.angular.y = 0.
-        twist.angular.z = 0.
+        twist.angular.z = vth
         odom.twist.twist = twist
 
         self._publisher_odom.publish(odom)
@@ -118,7 +117,7 @@ class DriverNode(Node):
             self._publisher_jointstate.publish(jointState)
 
     def callback_cmdvel(self, msg):
-        self.robot.move([msg.linear.x, -msg.angular.z])
+        self.robot.move([msg.linear.x, msg.angular.z])
 
     def stop(self):
         self.robot.stop()
